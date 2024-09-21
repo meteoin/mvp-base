@@ -8,7 +8,9 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>MVP Base</title>
+    <title>
+      MVP Base
+    </title>
 
     <!-- ===============================================-->
     <!--    Favicons-->
@@ -79,16 +81,14 @@
           data-navbar-soft-on-scroll="data-navbar-soft-on-scroll"
         >
           <div class="container-fluid px-0">
-            <a href="/"
-              >
+            <a href="/">
               <!-- <img
                 class="navbar-brand w-75 d-md-none"
                 src="assets/img/logos/logo.svg"
                 alt="logo" /></a
             > -->
             <a class="navbar-brand fw-bold" href="/"
-              >MVP Base</a
-            >
+              >MVP Base</a>
             <a
               class="btn btn-primary btn-sm ms-md-x1 mt-lg-0 order-md-1 ms-auto"
               href="http://meet.meteo-in.com/"
@@ -137,14 +137,13 @@
         <div data-bs-target="#navbar" data-bs-spy="scroll" tabindex="0">
           <section
             class="hero-section overflow-hidden position-relative z-0 mb-4 mb-lg-0"
-            id="home"
-          >
+            id="home">
             <div class="hero-background">
               <div class="container">
-                <div class="row gy-4 gy-md-8 pt-9 pt-lg-0">
-                  <div class="col-lg-6 text-center text-lg-start">
+                <div class="row gy-4 gy-md-8 pt-5 pt-lg-0">
+                  <div class="col-lg-6 mt-0 text-center text-lg-start">
                     <h1
-                      class="fs-2 fs-lg-1 text-white fw-bold mb-2 mb-lg-x1 lh-base mt-3 mt-lg-0"
+                      class="fs-2 fs-lg-1 text-white fw-bold mb-2 mb-lg-x1 lh-base "
                     >
                   </br>
                   </br>
@@ -300,7 +299,7 @@
                     />
                   </div>
                   <h6 class="text-lg-center mt-2 lh-xl mb-0">
-                    A Cloud Computing platform made from scratch to cut down 3rd party services cost by 60% and bring AI model computation in house.
+                    A custom Cloud platform reducing 3rd-party costs by 60% and bringing AI model computation in-house.
                   </h6>
                 </div>
                 <div
@@ -336,7 +335,7 @@
                     />
                   </div>
                   <h6 class="text-lg-center mt-2 lh-xl mb-0">
-                    A human resource management system that has been developed to provide a simplified functionality keeping in mind the customer experience and using the utility firsthand for the company.
+                    A human resource management system developed to simplify functionality, enhance customer experience, and offer utility firsthand for the company.
                   </h6>
                 </div>
               </div>
@@ -450,7 +449,7 @@
             class="experience position-relative overflow-hidden"
             id="service"
           >
-            <div class="container">
+            <div class="container d-flex flex-column justify-content-center align-items-center">
               <div class="row justify-content-center">
                 <div class="col-12">
                   <!-- <div
@@ -495,9 +494,8 @@
                 </div>
                 <div class="col-md-8 col-lg-7">
                   <h2
-                    class="fs-4 fs-lg-3 fw-bold text-center text-white mb-5 mb-lg-9 lh-sm"
+                    class="w-100 fs-4 pt-5 fs-lg-3 fw-bold text-center text-white mb-5 mb-lg-9 lh-sm"
                   >
-                </br>
                     Why Choose Us?
                   </h2>
                 </div>
@@ -591,12 +589,6 @@
               </div>
             </div>
             <div class="position-absolute top-0 start-0 end-0">
-              <div class="bg-white py-3 py-md-9 py-xl-10"></div>
-              <img
-                class="wave"
-                src="assets/img/illustrations/Wave_2.svg"
-                alt=""
-              />
             </div>
           </section>
           <section class="bg-1100 mt-n1">
@@ -772,17 +764,27 @@
               <div class="row justify-content-center">
                 <div class="col-md-8 col-lg-7">
                   <h3
-                    class="fs-4 fs-lg-3 fw-bold text-center mb-2 mb-lg-x1 lh-sm px-5"
+                    class="fs-4 fs-lg-3 fw-bold text-center mb-1 lh-sm px-5"
                   >
                     Pricing
                   </h3>
-                  <p class="fs-8 mb-7 mb-lg-8 text-center lh-lg fw-normal">
+                  <p class="fs-8 text-center lh-lg fw-normal">
                     Choose the plan that best suits your needs.
                     <span class="d-block d-lg-inline">No hidden charges.</span>
                     <span class="d-block d-lg-inline"
                       >Monthly plans available.</span
                     >
                   </p>
+                </div>
+                <div class="w-50 mt-2 mb-4 mb-lg-5 d-flex justify-content-center align-items-center">
+                    <div class="w-50 d-flex gap-1 justify-content-center align-items-center">
+                      <div class="btn btn-dark px-3 py-2 one-time-btn" id="oneTimeBtn">
+                          One-Time
+                      </div>
+                      <div class="btn btn-outline-dark px-3 py-2 monthly-btn" id="monthlyBtn">
+                        Monthly
+                      </div>
+                    </div>
                 </div>
                 <div class="col-12 w-100">
                   <div
@@ -796,10 +798,10 @@
                       >
                         Designing
                       </p>
-                      <h2 class="mb-3">
+                      <h2 class="mb-3" id="priceDisplay">
                         <span class="fs-6 fs-md-7 fw-bold">$</span
-                        ><span class="fs-2 fs-md-1 fw-bold">999</span
-                        ><span class="fs-9 lh-xl font-sans-serif"
+                        ><span class="fs-2 fs-md-1 fw-bold" id="priceValue1">999</span
+                        ><span class="fs-9 lh-xl font-sans-serif priceType" id="priceType"
                           >/ one-time</span
                         >
                       </h2>
@@ -837,8 +839,8 @@
                       </p>
                       <h2 class="mb-3">
                         <span class="fs-6 fs-md-7 fw-bold">$</span
-                        ><span class="fs-2 fs-md-1 fw-bold">2999</span
-                        ><span class="fs-9 lh-xl font-sans-serif"
+                        ><span class="fs-2 fs-md-1 fw-bold" id="priceValue2">2999</span
+                        ><span class="fs-9 lh-xl font-sans-serif priceType" id="priceType"
                           >/ one-time</span
                         >
                       </h2>
@@ -876,8 +878,8 @@
                       </p>
                       <h2 class="mb-3">
                         <span class="fs-6 fs-md-7 fw-bold">$</span
-                        ><span class="fs-2 fs-md-1 fw-bold">6999</span
-                        ><span class="fs-9 lh-xl font-sans-serif"
+                        ><span class="fs-2 fs-md-1 fw-bold" id="priceValue3">6999</span
+                        ><span class="fs-9 lh-xl font-sans-serif priceType" id="priceType"
                           >/ one-time</span
                         >
                       </h2>
@@ -913,8 +915,8 @@
                       </p>
                       <h2 class="mb-3">
                         <span class="fs-6 fs-md-7 fw-bold">$</span
-                        ><span class="fs-2 fs-md-1 fw-bold">6999</span
-                        ><span class="fs-9 lh-xl font-sans-serif"
+                        ><span class="fs-2 fs-md-1 fw-bold" id="priceValue4">6999</span
+                        ><span class="fs-9 lh-xl font-sans-serif priceType" id="priceType"
                           >/ one-time</span
                         >
                       </h2>
@@ -956,7 +958,7 @@
                       <h2
                         class="text-white fs-4 fs-lg-3 lh-sm mb-2 text-center text-lg-start fw-bold"
                       >
-                        Frequently Asked Questions
+                        Frequently Asked Questions.
                       </h2>
                       <p
                         class="fs-8 text-white text-opacity-65 mb-4 mb-md-6 mb-lg-7 lh-lg mb-6 mb-lg-7 text-center text-lg-start"
@@ -1155,13 +1157,13 @@
               </div>
             </div>
           </section>
-          <section class="position-relative z-0" id="contact">
-            <div class="container py-8 py-lg-9">
+          <section class="w-100 position-relative z-0 d-flex justify-content-center" id="contact">
+            <div class="container py-8 py-lg-9 mx-0">
               <div class="row justify-content-center">
-                <div class="col-md-8 col-lg-8">
-                  <div class="row justify-content-center">
+                <div class="col-md-12 col-lg-12">
+                  <div class="w-100 row justify-content-center">
                     <div class="col-12 col-lg-10">
-                      <h2 class="fs-4 fs-lg-3 fw-bold text-center mb-2 lh-sm">
+                      <h2 class="fs-4 fs-lg-3 fw-bold text-center mb-1 lh-sm">
                         Behind The Team?
                       </h2>
                       <p
@@ -1171,63 +1173,117 @@
                         the way you want.
                       </p>
                     </div>
-                    <div class="col-12">
-                      <div class="d-flex flex-items-center flex-wrap justify-content-center gap-3">
-                        <div
-                          class="flex flex-column align-items-center justify-content-center"
-                        >
-                          <img
-                            alt="Eqan Ahmad"
-                            loading="lazy"
-                            width="200"
-                            height="200"
-                            decoding="async"
-                            data-nimg="1"
-                            class="rounded-lg"
-                            style="color: transparent"
-                            src="https://avatars.githubusercontent.com/u/61124752?v=4"
-                          />
-                          <h6 class="mt-2 fs-7">Eqan Ahmad</h6>
-                          <h6 class="fs-10 text-700">Co-Founder & Product Manager</h6>
-                          <h6 class="fs-10 text-700"></h6>
-                        </div>
-                        <div
-                          class="flex flex-column align-items-center justify-content-center"
-                        >
-                          <img
-                            alt="Muhammad Ali"
-                            loading="lazy"
-                            width="200"
-                            height="200"
-                            decoding="async"
-                            data-nimg="1"
-                            class="rounded-lg"
-                            style="color: transparent"
-                            src="https://avatars.githubusercontent.com/u/115064667?v=4"
-                          />
-                          <h6 class="mt-2 fs-7">Muhammad Ali</h6>
-                          <h6 class="fs-10 text-700">Co-Founder & Frontend Lead</h6>
-                          <h6 class="fs-10 text-700"></h6>
-                        </div>
 
+                    <div class="col-lg-12 w-100">
+                      <div class="d-flex mt-3 flex-column flex-items-center flex-wrap justify-content-center align-items-center gap-2">
+                        <div class="teams-div d-flex justify-content-center w-75">
+                          <div
+                          class="d-flex flex-column align-items-center justify-content-center"
+                          >
+                            <img
+                              alt="Eqan Ahmad"
+                              loading="lazy"
+                              width= "150"
+                              height="150"
+                              decoding="async"
+                              data-nimg="1"
+                              class="rounded-lg"
+                              style="color: transparent"
+                              src="https://avatars.githubusercontent.com/u/61124752?v=4"
+                            />
+                            <h6 class="mt-2 fw-bold fs-7">Eqan Ahmad</h6>
+                            <p class="fs-10 mb-0 text-700">Co-Founder &</p>
+                            <p class="fs-10 text-700">Product Manager</p>
+                          </div>
+                          <div class="ms-2 px-2 text-justify" style="line-height: 1.25;">
+                            <ul class="text-black">
+                              <li class="mt-1">
+                                Developed and Scaled 3+ Large Scale Startups by age of 23.
+                              </li>
+                              <li class="mt-1">
+                                Selected for National Level Award for novel blockchain based degree verification and publication system.
+                              </li>
+                              <li class="mt-1">
+                                Pristine Freelance profile: Level 2 Fiverr with 80+ Projects Completed and 4.8+ Rating.
+                              </li>
+                              <li class="mt-1">
+                                Expertise in AI/ML, SaaS, Web3, Fintech, Cloud Computing and No Code.
+                              </li>
+                            </ul>
+                          </div>
+                      </div>
+                      <div class="teams-div d-flex justify-content-center w-75">
                         <div
-                          class="flex flex-column align-items-center justify-content-center"
-                        >
-                          <img
-                            alt="Muhammad Asadullah"
-                            loading="lazy"
-                            width="200"
-                            height="200"
-                            decoding="async"
-                            data-nimg="1"
-                            class="rounded-lg"
-                            style="color: transparent"
-                            src="assets/img/avatars/asad.png"
-                          />
-                          <h6 class="mt-2 fs-7"> Muhammad Asadullah</h6>
-                          <h6 class="fs-10 text-700">Co-Founder & Backend Lead</h6>
-                          <h6 class="fs-10 text-700"></h6>
-                        </div>
+                        class="d-flex flex-column align-items-center justify-content-center"
+                      >
+                        <img
+                          alt="Ali"
+                          loading="lazy"
+                          width= "150"
+                          height="150"
+                          decoding="async"
+                          data-nimg="1"
+                          class="rounded-lg"
+                          style="color: transparent"
+                          src="https://avatars.githubusercontent.com/u/115064667?v=4"
+                        />
+                        <h6 class="mt-2 fw-bold fs-7">Ali</h6>
+                        <p class="fs-10 mb-0 text-700">Co-Founder &</p>
+                        <p class="fs-10 text-700">Frontend Lead</p>
+                      </div>
+                      <div class="ms-2 px-2 text-justify" style="line-height: 1.25;">
+                        <ul class="text-black">
+                          <li class="mt-1">
+                            Proficient in rapid prototyping and iterative development.
+                          </li>
+                          <li class="mt-1">
+                            Strong command of core Computer Science principles.
+                          </li>
+                          <li class="mt-1">
+                            Expertise in streamlining development processes for faster releases.
+                          </li>
+                          <li class="mt-1">
+                            Collaborated on products that have gained global traction and user adoption.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-center w-75">
+                      <div
+                      class="teams-div d-flex flex-column align-items-center justify-content-center"
+                    >
+                      <img
+                        alt="Asadullah"
+                        loading="lazy"
+                        width= "150"
+                        height="150"
+                        decoding="async"
+                        data-nimg="1"
+                        class="rounded-lg"
+                        style="color: transparent"
+                        src="assets/img/avatars/asad.png"
+                      />
+                      <h6 class="mt-2 fw-bold fs-7">Asadullah</h6>
+                      <p class="fs-10 mb-0 text-700">Co-Founder &</p>
+                      <p class="fs-10 text-700">Backend Lead</p>
+                    </div>
+                    <div class="ms-2 px-2 text-justify" style="line-height: 1.25;">
+                      <ul class="text-black">
+                        <li class="mt-1">
+                          Developed and Scaled 3+ Large Scale Startups by age of 23.
+                        </li>
+                        <li class="mt-1">
+                          Selected for National Level Award for novel blockchain based degree verification and publication system.
+                        </li>
+                        <li class="mt-1">
+                          Pristine Freelance profile: Level 2 Fiverr with 80+ Projects Completed and 4.8+ Rating.
+                        </li>
+                        <li class="mt-1">
+                          Expertise in AI/ML, SaaS, Web3, Fintech, Cloud Computing and No Code.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                       </div>
                     </div>
                   </div>
@@ -1238,13 +1294,6 @@
               class="position-absolute bottom-0 end-0 z-n1 d-none d-lg-block"
             >
               <img src="assets/img/illustrations/Green_dots.svg" alt="" />
-            </div>
-            <div class="position-relative bottom-0 start-0 z-1">
-              <img
-                class="img-fluid w-100"
-                src="assets/img/illustrations/Wave_3.svg"
-                alt=""
-              />
             </div>
           </section>
           <section class="bg-300 position-relative z-0" id="contact">
@@ -1280,13 +1329,6 @@
             >
               <img src="assets/img/illustrations/Green_dots.svg" alt="" />
             </div>
-            <div class="position-relative bottom-0 start-0 z-1">
-              <img
-                class="img-fluid w-100"
-                src="assets/img/illustrations/Wave_3.svg"
-                alt=""
-              />
-            </div>
           </section>
         </div>
         <button
@@ -1296,93 +1338,17 @@
           <span class="uil uil-angle-up"></span>
         </button>
         <footer class="pt-7 pt-lg-8">
-          <div class="container">
-            <div
-              class="row gy-4 g-md-3 border-bottom pb-8 pb-lg-9 justify-content-center"
-            >
-              <!-- <div class="col-6 col-md-3">
-                <p class="mb-2 lh-lg ls-1">Company</p>
-                <ul class="list-unstyled text-1100">
-                  <li class="mb-1">
-                    <a class="ls-1 lh-xl" href="#about">Services</a>
-                  </li>
-                  <li class="mb-1">
-                    <a class="ls-1 lh-xl" href="#contact"> Contact us</a>
-                  </li>
-                  <li class="mb-1">
-                    <a class="ls-1 lh-xl" href="#!">Careers</a>
-                  </li>
-                  <li class="mb-1">
-                    <a class="ls-1 lh-xl" href="#!">Press</a>
-                  </li>
-                </ul>
-              </div> -->
-              <!-- <div class="col-6 col-md-3">
-                <p class="mb-2 lh-lg">Product</p>
-                <ul class="list-unstyled text-1100">
-                  <li class="mb-1">
-                    <a class="ls-1 lh-xl" href="#!">Features</a>
-                  </li>
-                  <li class="mb-1">
-                    <a class="ls-1 lh-xl" href="#!"> Pricing</a>
-                  </li>
-                  <li class="mb-1">
-                    <a class="ls-1 lh-xl" href="#!"> News</a>
-                  </li>
-                  <li class="mb-1">
-                    <a class="ls-1 lh-xl" href="#!"> Help desk</a>
-                  </li>
-                  <li class="mb-1">
-                    <a class="ls-1 lh-xl" href="#!"> Support</a>
-                  </li>
-                </ul>
-              </div> -->
-              <!-- <div class="col-6 col-md-3">
-                <p class="mb-2 lh-lg">Legal</p>
-                <ul class="list-unstyled text-1100">
-                  <li class="mb-1">
-                    <a class="ls-1 lh-xl" href="#!">Privacy</a>
-                  </li>
-                  <li class="mb-1">
-                    <a class="ls-1 lh-xl" href="#!"> Terms & Conditions</a>
-                  </li>
-                  <li class="mb-1">
-                    <a class="ls-1 lh-xl" href="#!"> Return Policy</a>
-                  </li>
-                </ul>
-              </div> -->
-            </div>
-            <div
-              class="row gy-2 py-3 justify-content-center justify-content-md-between"
-            >
+          <div class="container border-top">
               <div class="col-auto ps-0">
-                <p class="text-center text-md-start lh-xl text-1100">
+                <p class="py-2 text-center text-md-start lh-xl text-1100">
                   Copyright © 2024 MVPBase. All Rights Reserved.
                 </p>
               </div>
-              <!-- <div class="col-auto pe-0">
-                <a
-                  class="icons fs-8 me-3 me-md-0 ms-md-3 cursor-pointer"
-                  href="#!"
-                  ><span class="uil uil-twitter"> </span></a
-                ><a
-                  class="icons fs-8 me-3 me-md-0 ms-md-3 cursor-pointer"
-                  href="#!"
-                  ><span class="uil uil-instagram"></span></a
-                ><a
-                  class="icons fs-8 me-3 me-md-0 ms-md-3 cursor-pointer"
-                  href="#!"
-                  ><span class="uil uil-linkedin"> </span
-                ></a>
-              </div> -->
-            </div>
           </div>
         </footer>
       </div>
     </main>
-    <!-- ===============================================--><!--    End of Main Content--><!-- ===============================================-->
 
-    <!-- ===============================================--><!--    JavaScripts--><!-- ===============================================-->
     <script src="vendors/popper/popper.min.js"></script>
     <script src="vendors/bootstrap/bootstrap.min.js"></script>
     <script src="vendors/is/is.min.js"></script>
@@ -1391,5 +1357,44 @@
     <script src="vendors/lodash/lodash.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
     <script src="assets/js/theme.js"></script>
+    <script>
+
+      oneTimeBtn = document.getElementById('oneTimeBtn');
+      monthlyBtn = document.getElementById('monthlyBtn'); 
+
+      let price1 = document.getElementById('priceValue1')
+      let price2 = document.getElementById('priceValue2')
+      let price3 = document.getElementById('priceValue3')
+      let price4 = document.getElementById('priceValue4')
+      let type = document.getElementsByClassName('priceType');
+
+      oneTimeBtn.addEventListener('click', function() {
+        price1.textContent = '999';
+        price2.textContent = '2999';
+        price3.textContent = '6999';
+        price4.textContent = '6999';
+        for (let i = 0; i < type.length; i++) {
+          type[i].textContent = '/ one-time';
+        }
+        this.classList.remove('btn-outline-dark');
+        this.classList.add('btn-dark');
+        monthlyBtn.classList.remove('btn-dark');
+        monthlyBtn.classList.add('btn-outline-dark');
+      });
+
+      monthlyBtn.addEventListener('click', function() {
+        price1.textContent = '699';
+        price2.textContent = '1499';
+        price3.textContent = '3999';
+        price4.textContent = '2999';
+        for (let i = 0; i < type.length; i++) {
+          type[i].textContent = '/ month';
+        }
+        this.classList.remove('btn-outline-dark');
+        this.classList.add('btn-dark');
+        oneTimeBtn.classList.remove('btn-dark');
+        oneTimeBtn.classList.add('btn-outline-dark');
+      });
+  </script>
   </body>
 </html>
